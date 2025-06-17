@@ -16,3 +16,283 @@
 @import url('./badges.css');
 @import url('./back-link.css');
 @import url('./footer.css');
+
+/* timer stilleri start */
+
+.main-container {
+  margin-top: 36px;
+  margin-left: 156px;
+}
+
+.date-picker-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 8px;
+  width: 355px;
+  height: 40px;
+  margin-bottom: 32px;
+}
+
+#datetime-picker,
+button[data-start] {
+  height: 40px;
+  box-sizing: border-box;
+}
+
+#datetime-picker {
+  width: 272px;
+  height: 40px;
+  padding: 8px 16px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background-color: #ffffff;
+  border: 1px solid #808080;
+  color: #2e2f42;
+  transition: border-color 0.3s, color 0.3s, background-color 0.3s;
+}
+
+#datetime-picker:hover:not(:disabled) {
+  border-color: #2e2f42;
+  color: #000000;
+}
+
+#datetime-picker:focus:not(:disabled) {
+  border-color: #4e75ff;
+  color: #000000;
+  outline: none;
+}
+
+#datetime-picker:disabled {
+  border-color: #808080;
+  background-color: #fafafa;
+  color: #808080;
+  cursor: not-allowed;
+}
+
+button[data-start] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 75px;
+  height: 40px;
+  background: #cfcfcf;
+  border: none;
+}
+
+button[data-start]:not(:disabled) {
+  background: #4e75ff;
+  color: #ffffff;
+  cursor: pointer;
+  border: none;
+}
+
+button[data-start]:not(:disabled):hover {
+  background: #6c8cff;
+  color: #ffffff;
+}
+
+button[data-start]:not(:disabled):active {
+  background: #4e75ff;
+  color: #ffffff;
+  transform: scale(0.98);
+  transition: transform 0.1s ease;
+}
+
+.flatpickr-calendar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  box-sizing: border-box;
+  gap: 24px;
+  border-radius: 8px;
+  padding: 16px;
+  width: 280px;
+  height: 352px;
+  background: #f5f5f5;
+}
+
+.flatpickr-months {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 28px;
+  width: 248px;
+  height: 20px;
+  margin: 16px 16px 24px 16px;
+}
+
+.month-year-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 32px;
+  width: 159px;
+  height: 20px;
+}
+
+.flatpickr-prev-month,
+.flatpickr-next-month {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+}
+
+.flatpickr-day.selected {
+  border-radius: 100%;
+  background: #4e75ff;
+  color: #ffffff;
+}
+.flatpickr-day:hover:not(.selected):not(.today):not(.inRange) {
+  background-color: transparent;
+  border-radius: 100%;
+  border: 1px solid #4e75ff;
+  color: #666666;
+}
+
+.date-time-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 16px;
+  width: 248px;
+  height: 276px;
+}
+
+.timer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 24px;
+  width: 346px;
+  height: 72px;
+}
+
+.timer .field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+}
+
+.timer .value {
+  font-size: 40px;
+  color: #2e2f42;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.04em;
+}
+
+.timer .label {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #2e2f42;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* timer stilleri end */
+
+/* snackbar stilleri start */
+
+.delay-label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 8px;
+  width: 360px;
+  height: 72px;
+  margin-left: 156px;
+  margin-top: 36px;
+  box-sizing: border-box;
+}
+
+.delay-label span {
+  font: 400 16px / 1.5 'Montserrat', sans-serif;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  width: 91px;
+  height: 24px;
+  display: inline-block;
+}
+
+.delay-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #808080;
+}
+
+.delay-input:hover {
+  border-color: #2e2f42;
+}
+
+.delay-input:focus {
+  border-color: #4e75ff;
+  outline: none;
+}
+
+.state-fieldset {
+  width: 360px;
+  height: 78px;
+  margin-left: 156px;
+  margin-top: 16px;
+  margin-bottom: 24px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #808080;
+  box-sizing: border-box;
+}
+
+.state-fieldset:hover {
+  border-color: #000000;
+}
+
+.state-fieldset:active {
+  border-color: #000000;
+}
+
+.state-fieldset legend {
+  font: 400 16px / 1.5 'Montserrat', sans-serif;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 360px;
+  margin-left: 156px;
+  margin-top: 24px;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #4e75ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #6c8cff;
+}
+
+/* snackbar stilleri end */
